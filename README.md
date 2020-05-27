@@ -4,7 +4,7 @@
 
 https://github.com/ValLaboratory/rookie-training/blob/master/virtualization/README.md
 
-## コマンド
+## Dockerコマンド
 
 1. イメージの作成 ( Dockerfile を元にイメージを作成 )
     - $ docker-compose build
@@ -16,9 +16,27 @@ https://github.com/ValLaboratory/rookie-training/blob/master/virtualization/READ
 1. コンテナの削除
     - $ docker-compose down
 
-### 他に使えそうなコマンド
+### Docker Tipsコマンド
 
 - $ docker-compose ps
   - 立ち上がってるContainer（service）を確認できる
 - $ docker images
   - ビルドした or docker pullしたイメージの一覧を確認できる
+
+## Railsコマンド
+
+https://railsdoc.com/rails
+https://qiita.com/jun_jun_jun/items/dd260c43387a8e17803d
+
+- rails new sample
+  - 指定するか考えておくべきコマンド一覧
+    - -d postgresql, --datebase=postgresql
+    - --skip-test # minitestオフ
+    - --skip-turbolinks #  turbolinksオフ
+  - $ rails new app_name -d postgresql --skip-test --skip-turbolinks
+- rails webpacker:install
+- rails s -p 3000 -b '0.0.0.0'
+  - bind
+  - http://localhost:3000/
+- PG Connection
+  - 
