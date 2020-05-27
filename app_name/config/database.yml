@@ -23,7 +23,10 @@ default: &default
 
 development:
   <<: *default
+  host: rails_db
   database: app_name_development
+  username: postgres
+  password: postgres
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
