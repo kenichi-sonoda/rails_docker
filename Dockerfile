@@ -26,6 +26,10 @@ RUN curl --silent --location https://dl.yarnpkg.com/rpm/yarn.repo | tee /etc/yum
 RUN yum -y install gcc-c++ sqlite-devel nodejs yarn
 RUN gem install rails -v "6.0.3"
 
+# PostgreSQL用のgem `pg` のビルドで必要になるライブラリを入れる
+# https://qiita.com/tdrk/items/812e7ea763080e147757
+RUN yum -y install postgresql-devel
+
 RUN rbenv -v && \
     ruby -v && \
     bundler -v && \

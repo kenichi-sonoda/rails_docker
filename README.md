@@ -20,3 +20,5 @@ https://github.com/ValLaboratory/rookie-training/blob/master/virtualization/READ
 
 - $ docker-compose ps
   - 立ち上がってるContainer（service）を確認できる
+- $ docker images
+  - ビルドした or docker pullしたイメージの一覧を確認できる
