@@ -15,3 +15,8 @@ https://github.com/ValLaboratory/rookie-training/blob/master/virtualization/READ
     - $ docker-compose exec rails_web bash
 1. コンテナの削除
     - $ docker-compose down
+
+### 他に使えそうなコマンド
+
+- $ docker-compose ps
+  - 立ち上がってるContainer（service）を確認できる

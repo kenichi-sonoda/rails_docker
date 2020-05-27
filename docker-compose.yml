@@ -10,6 +10,15 @@ services:
       - "3000:3000" # port forwarding `local port:container port`
     tty: true
     # command: rails s -p 3000 -b '0.0.0.0'
+  rails_db:
+    image: "postgres:12.3" # https://hub.docker.com/_/postgres
+    restart: always # 不明
+    environment:
+      POSTGRES_USER: postgres # デフォルトで宣言されてるので必要はないけどわかりやすくするため
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    tty: true
   # PostgreSQL DB構築に当たって
   # - pattern 1 こちらを採用
   #   - postgreSQLのDockerを利用する
@@ -25,14 +34,3 @@ services:
   #   - rails_webにpostgreSQLを入れる
   #     - サービスは分けずにDockerfile内にPostgreSQLを入れる形
   #     - Deployを考慮しない、開発用環境として割り切る
-  # links:
-  #   - db
-
-  # rails_db:
-  #   image: ポスグレにする
-  #   environment:
-  #     MYSQL_ROOT_PASSWORD: password
-  #     MYSQL_DATABASE: root
-  #   ports:
-  #     - "3306:3306"
-  #   tty: true
