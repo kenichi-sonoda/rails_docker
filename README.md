@@ -39,4 +39,14 @@ https://qiita.com/jun_jun_jun/items/dd260c43387a8e17803d
   - bind
   - http://localhost:3000/
 - PG Connection
-  - 
+  - database.yml の develop:とtest:を 書き換え
+    - development:
+        <<: *default
+        database: app_name_development
+        host: rails_db
+        username: postgres
+        password: postgres
+- No Database
+  - rails db:create
+    - developmentとtestを作成する
+  - さらにcreate:allで全DBを作成する
