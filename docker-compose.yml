@@ -1,0 +1,23 @@
+# 記述形式のバージョン
+version: '3.7'
+# コンテナの設定
+services:
+  rails_web:
+    build: . # build: context: . の省略形
+    volumes:
+      - .:/home/
+    ports:
+      - "3000:3000"
+    tty: true
+  # command: rails s -p 3000 -b '0.0.0.0'
+  # links:
+  #   - db
+
+  # rails_db:
+  #   image: ポスグレにする
+  #   environment:
+  #     MYSQL_ROOT_PASSWORD: password
+  #     MYSQL_DATABASE: root
+  #   ports:
+  #     - "3306:3306"
+  #   tty: true
