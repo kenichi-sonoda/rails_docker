@@ -1,9 +1,5 @@
 # rails_docker
 
-## 資料
-
-https://github.com/ValLaboratory/rookie-training/blob/master/virtualization/README.md
-
 ## Dockerコマンド
 
 1. イメージの作成 ( Dockerfile を元にイメージを作成 )
